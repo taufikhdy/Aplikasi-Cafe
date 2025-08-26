@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Kafein Teras - @yield('title')</title>
+    <title>@yield('title') - Kafein Teras</title>
 
     {{-- FONT --}}
 
@@ -20,18 +20,20 @@
     <link rel="stylesheet" href="{{ asset('fonts/remixicon.css') }}">
 
     {{-- STYLES --}}
-    <link rel="stylesheet" href="{{ asset('styles/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main.css?V7++') }}">
+    <link rel="stylesheet" href="{{ asset('styles/layout.css?V6++') }}">
 
 </head>
 
 <body>
 
-    @include('components.navbar')
+    @include('components.nav_top')
 
-    <main>
+    <section>
         @yield('content')
-    </main>
+    </section>
+
+    @include('components.nav_bottom')
 
 </body>
 
