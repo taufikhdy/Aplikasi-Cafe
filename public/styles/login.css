@@ -1,0 +1,164 @@
+:root {
+
+    --neutral-100: hsl(0, 0%, 100%);
+    --neutral-90: hsl(0, 0%, 90%);
+    --neutral-80: hsl(0, 0%, 80%);
+    --neutral-70: hsl(0, 0%, 70%);
+    --neutral-60: hsl(0, 0%, 60%);
+    --neutral-50: hsl(0, 0%, 50%);
+    --neutral-40: hsl(0, 0%, 40%);
+    --neutral-30: hsl(0, 0%, 30%);
+    --neutral-20: hsl(0, 0%, 20%);
+    --neutral-10: hsl(0, 0%, 10%);
+
+    --font: 'montserrat', 'segoe-ui';
+
+    --body-regular: 16px;
+    --regular-height: 24px;
+
+    --body-small: 14px;
+    --small-height: 22px;
+
+    --body-large: 18px;
+    --large-height: 28px;
+
+    --caption: 12px;
+    --cp-height: 18px;
+
+    --h1: 36px;
+    --h1-height: 44px;
+
+    --h2: 30px;
+    --h2-height: 40px;
+
+    --h3: 24px;
+    --h3-height: 32px;
+
+    --h4: 20px;
+    --h4-height: 28px;
+
+    --h5: 18px;
+    --h5-height: 26px;
+
+    --h6: 16px;
+    --h6-height: 24px;
+}
+
+h1 {
+    font-size: var(--h1);
+    line-height: var(--h1-height);
+    color: var(--neutral-20);
+}
+
+h2 {
+    font-size: var(--h2);
+    line-height: var(--h2-height);
+    color: var(--neutral-20);
+}
+
+h3 {
+    font-size: var(--h3);
+    line-height: var(--h3-height);
+    color: var(--neutral-20);
+}
+
+h3.bold {
+    font-weight: 800;
+}
+
+h4 {
+    font-size: var(--h4);
+    line-height: var(--h4-height);
+    color: var(--neutral-20);
+}
+
+h5 {
+    font-size: var(--h5);
+    line-height: var(--h5-height);
+    color: var(--neutral-20);
+}
+
+h6 {
+    font-size: var(--h6);
+    line-height: var(--h6-height);
+    color: var(--neutral-20);
+}
+
+.text-small {
+    font-size: var(--body-small);
+    line-height: var(--small-height);
+}
+
+.text-regular {
+    font-size: var(--body-regular);
+    line-height: var(--regular-height);
+}
+
+.text-large {
+    font-size: var(--body-large);
+    line-height: var(--large-height);
+}
+
+.gray {
+    color: var(--neutral-60);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .3s;
+    font-family: var(--font);
+}
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.login-box .box {
+    background-color: hsl(0, 0%, 100%);
+    width: max-content;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px hsla(0, 0%, 0%, 0.107);
+}
+
+.box .header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.box p{
+    padding: 10px 0px 0px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(135, 207, 235, 0);
+    padding: 15px 10px;
+    border-radius: 10px;
+    color: var(--neutral-60);
+    background: none;
+    margin-top: 20px;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: #00880D;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: var(--body-small);
+    cursor: pointer;
+}
+
+input:focus {
+    color: var(--neutral-20);
+    border: 1px solid rgb(135, 207, 235);
+}

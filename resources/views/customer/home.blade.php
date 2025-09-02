@@ -35,7 +35,7 @@
 
     <div class="box">
         <div class="title">
-            <h4>Apa aja nih yang enak di Cafein Teras?</h4>
+            <h4>Apa aja nih yang enak di Kafein Teras?</h4>
             <a href="" class="nowrap">Lihat Semua</a>
         </div>
 

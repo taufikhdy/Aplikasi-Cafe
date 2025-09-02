@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -16,24 +17,24 @@ use Illuminate\Support\Facades\Redirect;
 class AuthController extends Controller
 {
 
-    public function register(): View
-    {
-        return view('auth.login');
-    }
+    // public function register(): View
+    // {
+    //     return view('auth.login');
+    // }
 
-    public function store(Request $request): RedirectResponse
-    {
-        $request->validate([
-            'name' => 'required|string|max:250',
-            'meja_id' => 'required',
-            'status' => 'required|string'
-        ]);
+    // public function store(Request $request): RedirectResponse
+    // {
+    //     $request->validate([
+    //         'name' => 'required|string|max:250',
+    //         'meja_id' => 'required',
+    //         'status' => 'required|string'
+    //     ]);
 
-        $credentials = $request->only('meja_id', 'status');
-        Auth::attempt($credentials);
-        $request->session()->regenerate();
-        return redirect()->route('home');
-    }
+    //     $credentials = $request->only('meja_id', 'status');
+    //     Auth::attempt($credentials);
+    //     $request->session()->regenerate();
+    //     return redirect()->route('home');
+    // }
 
     public function login(): View
     {
@@ -45,9 +46,8 @@ class AuthController extends Controller
     public function authenticate(Request $request)//: RedirectResponse
     {
         $credentials = $request->validate([
-            'nama' => 'required',
-            'meja_id' => 'required',
-            'status' => 'required'
+            'name' => 'required',
+            'password' => 'required',
         ]);
 
         if(Auth::attempt($credentials))
@@ -58,7 +58,7 @@ class AuthController extends Controller
 
             return match($role){
                 'admin' => redirect()->route('admin.dashboard'),
-                'customer' => redirect()->route('customer.homepage'),
+                'kasir' => redirect()->route('kasir.homepage'),
                 default => redirect()->route('login')
             };
         }
